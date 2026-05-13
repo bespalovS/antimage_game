@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 996fada00da455c43a7ddaf3fe65d6a7, type: 3}
+  m_Name: Slime1Stats
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyStats
+  EnemyName: Slime1
+  maxEnemyHealth: 30
+  EnemyDamage: 5
+  expReward: 50
+  potionDropChance: 0.1
+  potionPrefab: {fileID: 4259085164187002740, guid: 17e2c612b75ea914f9af6bb24d1b5094, type: 3}
