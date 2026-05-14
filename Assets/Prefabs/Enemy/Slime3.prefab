@@ -232,6 +232,14 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ecce6eb84a97eaf45b80b70f948ed227, type: 2}
+    - target: {fileID: 6534263284567512147, guid: 96f04ddab988d504f93278f73da5bb20, type: 3}
+      propertyPath: attackSounds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534263284567512147, guid: 96f04ddab988d504f93278f73da5bb20, type: 3}
+      propertyPath: 'attackSounds.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 54b6e366ceab24540b5f8f70628e4fab, type: 3}
     - target: {fileID: 7008224599700346428, guid: 96f04ddab988d504f93278f73da5bb20, type: 3}
       propertyPath: knockBackForce
       value: 3
@@ -244,6 +252,14 @@ PrefabInstance:
       propertyPath: stats
       value: 
       objectReference: {fileID: 11400000, guid: 0fd7f62b280ec54489f071462e3b378a, type: 2}
+    - target: {fileID: 8373124986704074447, guid: 96f04ddab988d504f93278f73da5bb20, type: 3}
+      propertyPath: 'hitSounds.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 6ee25a0935a582b44bedecbd12c15ca0, type: 3}
+    - target: {fileID: 8373124986704074447, guid: 96f04ddab988d504f93278f73da5bb20, type: 3}
+      propertyPath: 'deathSounds.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 6ee25a0935a582b44bedecbd12c15ca0, type: 3}
     - target: {fileID: 8814466911388987116, guid: 96f04ddab988d504f93278f73da5bb20, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
       value: 2.028854

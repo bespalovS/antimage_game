@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyStats
   EnemyName: Witch
   maxEnemyHealth: 1000
-  EnemyDamage: 50
+  EnemyDamage: 100
   expReward: 1000
   potionDropChance: 0.9
   potionPrefab: {fileID: 4259085164187002740, guid: 17e2c612b75ea914f9af6bb24d1b5094, type: 3}

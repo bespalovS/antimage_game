@@ -128,3 +128,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FireballExplosion
   lifetime: 0.6
+  fireballExplosinSound: {fileID: 8300000, guid: 36772baeb5e314f4d933a0e29415cb51, type: 3}
+  fireballExplosinVolume: 0.15

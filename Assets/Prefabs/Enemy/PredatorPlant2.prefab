@@ -308,6 +308,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyEntity
   stats: {fileID: 11400000, guid: a3366ecdf75ca9448a710c69b550817c, type: 2}
   healthBarPrefab: {fileID: 8848634082736425559, guid: 2114b9628ae787849ab4563031151984, type: 3}
+  hitSounds:
+  - {fileID: 8300000, guid: c42b836a90fa94543be96e722c58742a, type: 3}
+  - {fileID: 8300000, guid: 86406e9c0bf729848b4d931c102a1c4a, type: 3}
+  deathSounds:
+  - {fileID: 8300000, guid: 6d08ea7ae1e2edd4ca5d575a24204253, type: 3}
+  hitVolume: 0.3
+  deathVolume: 0.3
 --- !u!114 &2123980718142924760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,6 +458,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PredatorPlantVisual
   _enemyAi: {fileID: 8085654509058158484}
   _enemyEntity: {fileID: 578856321072932651}
+  attackSounds:
+  - {fileID: 8300000, guid: 274f95d8a976b4d4fabdc6890eaf78e2, type: 3}
+  - {fileID: 8300000, guid: 03ba06ffb6b1c7b40896cee1431fedba, type: 3}
+  attackVolume: 0.3
 --- !u!1 &2390759370800992545
 GameObject:
   m_ObjectHideFlags: 0

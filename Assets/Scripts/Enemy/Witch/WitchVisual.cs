@@ -9,6 +9,11 @@ public class WitchVisual : MonoBehaviour
     [SerializeField] private Transform fireballSpawnPoint;
     [SerializeField] private float spawnPointOffsetX = 0.5f;
 
+    [SerializeField] private AudioClip[] attackSounds;
+    [SerializeField][Range(0f, 1f)] private float attackVolume = 1f;
+    [SerializeField] private AudioClip DeathSounds;
+    [SerializeField][Range(0f, 1f)] private float DeathVolume = 1f;
+
     private Animator animator;
     private SpriteRenderer spriteRenderer;
 
@@ -78,6 +83,15 @@ public class WitchVisual : MonoBehaviour
     {
         animator.SetBool(IS_DIE, true);
         spriteRenderer.sortingOrder = -1;
+    }
+    public void PlayAttackSound()
+    {
+        AudioManager.Instance.PlayRandomSound(attackSounds, attackVolume);
+    }
+
+    public void PlayDeathSound()
+    {
+        AudioManager.Instance.PlaySound(DeathSounds, DeathVolume);
     }
 
     private void OnDestroy()

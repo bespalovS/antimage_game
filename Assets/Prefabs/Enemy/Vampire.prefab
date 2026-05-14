@@ -60,6 +60,22 @@ PrefabInstance:
       propertyPath: stats
       value: 
       objectReference: {fileID: 11400000, guid: 13fd128283d61654c9d07491b84c1cc8, type: 2}
+    - target: {fileID: 578856321072932651, guid: ae776a11b5ea59f4582239a20f3ba9eb, type: 3}
+      propertyPath: hitVolume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 578856321072932651, guid: ae776a11b5ea59f4582239a20f3ba9eb, type: 3}
+      propertyPath: 'hitSounds.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: b5696cd598dd7ce47ad01b8d8b9d3bce, type: 3}
+    - target: {fileID: 578856321072932651, guid: ae776a11b5ea59f4582239a20f3ba9eb, type: 3}
+      propertyPath: 'hitSounds.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: df8a8b820e65a9b4789e7847f6fdab85, type: 3}
+    - target: {fileID: 578856321072932651, guid: ae776a11b5ea59f4582239a20f3ba9eb, type: 3}
+      propertyPath: 'deathSounds.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: d60002cb881db70428764ff75a6ff3d6, type: 3}
     - target: {fileID: 1205394071379748639, guid: ae776a11b5ea59f4582239a20f3ba9eb, type: 3}
       propertyPath: m_Name
       value: Vampire
@@ -72,6 +88,18 @@ PrefabInstance:
       propertyPath: knockBackMovingTimerMax
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 2780286432055207351, guid: ae776a11b5ea59f4582239a20f3ba9eb, type: 3}
+      propertyPath: attackVolume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2780286432055207351, guid: ae776a11b5ea59f4582239a20f3ba9eb, type: 3}
+      propertyPath: attackSounds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2780286432055207351, guid: ae776a11b5ea59f4582239a20f3ba9eb, type: 3}
+      propertyPath: 'attackSounds.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: ca15753ada5299749b9f52359b2f432c, type: 3}
     - target: {fileID: 2891357491070071460, guid: ae776a11b5ea59f4582239a20f3ba9eb, type: 3}
       propertyPath: m_Controller
       value: 

@@ -14,6 +14,8 @@ public class DestructibleObject : MonoBehaviour, IDamageable
 
         StartCoroutine(Shake(hitDir));
 
+        AudioManager.Instance.PlayHitBrush();
+
         if (health <= 0)
         {
             OnDestructibleObjectTakeDamage?.Invoke(this, EventArgs.Empty);

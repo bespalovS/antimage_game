@@ -4,6 +4,10 @@ public class EnemyVisual : MonoBehaviour
 {
     [SerializeField] private EnemyAI _enemyAi;
     [SerializeField] private EnemyEntity _enemyEntity;
+
+    [SerializeField] private AudioClip[] attackSounds;
+    [SerializeField][Range(0f, 1f)] private float attackVolume = 1f;
+
     private Animator animator;
 
     private const string IS_MOVING = "IsMoving";
@@ -68,6 +72,11 @@ public class EnemyVisual : MonoBehaviour
     public void DisableHitbox()
     {
         _enemyAi.DisableHitbox();
+    }
+
+    public void PlayAttackSound()
+    {
+        AudioManager.Instance.PlayRandomSound(attackSounds, attackVolume);
     }
 
     private void OnDestroy()

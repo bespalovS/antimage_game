@@ -64,6 +64,18 @@ PrefabInstance:
       propertyPath: healthBarPrefab
       value: 
       objectReference: {fileID: 8848634082736425559, guid: 2114b9628ae787849ab4563031151984, type: 3}
+    - target: {fileID: 578856321072932651, guid: ae776a11b5ea59f4582239a20f3ba9eb, type: 3}
+      propertyPath: 'hitSounds.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 15914dd8adf537041bb5a1f0d16f09e7, type: 3}
+    - target: {fileID: 578856321072932651, guid: ae776a11b5ea59f4582239a20f3ba9eb, type: 3}
+      propertyPath: 'hitSounds.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 71429d390c1b829468b36c4ed15e8215, type: 3}
+    - target: {fileID: 578856321072932651, guid: ae776a11b5ea59f4582239a20f3ba9eb, type: 3}
+      propertyPath: 'deathSounds.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: d60002cb881db70428764ff75a6ff3d6, type: 3}
     - target: {fileID: 1205394071379748639, guid: ae776a11b5ea59f4582239a20f3ba9eb, type: 3}
       propertyPath: m_Name
       value: Orc1
@@ -80,6 +92,14 @@ PrefabInstance:
       propertyPath: knockBackMovingTimerMax
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 2780286432055207351, guid: ae776a11b5ea59f4582239a20f3ba9eb, type: 3}
+      propertyPath: 'attackSounds.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 684c65194bc7daf4b9e250b1a9ec4a37, type: 3}
+    - target: {fileID: 2780286432055207351, guid: ae776a11b5ea59f4582239a20f3ba9eb, type: 3}
+      propertyPath: 'attackSounds.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 01758042ae345984da8f0315add5fc1b, type: 3}
     - target: {fileID: 2891357491070071460, guid: ae776a11b5ea59f4582239a20f3ba9eb, type: 3}
       propertyPath: m_Controller
       value: 

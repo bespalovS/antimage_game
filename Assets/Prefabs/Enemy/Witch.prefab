@@ -226,6 +226,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyEntity
   stats: {fileID: 11400000, guid: 03f9a71871c4a2245abdf68e55ccfdfd, type: 2}
   healthBarPrefab: {fileID: 8848634082736425559, guid: 2114b9628ae787849ab4563031151984, type: 3}
+  hitSounds:
+  - {fileID: 8300000, guid: 80e6a4c57651e5642b77678f13fb0210, type: 3}
+  deathSounds: []
+  hitVolume: 0.4
+  deathVolume: 0.5
 --- !u!114 &4256883478424764331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,7 +244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KnockBack
   knockBackForce: 2
-  knockBackMovingTimerMax: 0.4
+  knockBackMovingTimerMax: 0.3
 --- !u!1 &3205292794665440479
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,6 +526,12 @@ MonoBehaviour:
   fireballEnemy: {fileID: 2175105188719988060}
   fireballSpawnPoint: {fileID: 7102234677347031671}
   spawnPointOffsetX: 0.5
+  attackSounds:
+  - {fileID: 8300000, guid: 742765ce1c53fda4b9d3f8d32280e31d, type: 3}
+  - {fileID: 8300000, guid: ce639e08cbf2880428e53934e512d875, type: 3}
+  attackVolume: 0.15
+  DeathSounds: {fileID: 8300000, guid: d60002cb881db70428764ff75a6ff3d6, type: 3}
+  DeathVolume: 0.2
 --- !u!1 &5945483921106482994
 GameObject:
   m_ObjectHideFlags: 0

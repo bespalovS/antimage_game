@@ -21,7 +21,10 @@ public class Note : MonoBehaviour
     private void GameInput_OnInteract(object sender, System.EventArgs e)
     {
         if (isPlayerNear)
+        {
             OpenNote();
+            AudioManager.Instance.PlayNote();
+        }
     }
 
     private void Update()

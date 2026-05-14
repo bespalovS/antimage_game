@@ -7,6 +7,14 @@ public class EnemyEntity : MonoBehaviour, IDamageable
     [SerializeField] private EnemyStats stats;
     [SerializeField] private GameObject healthBarPrefab;
 
+    [Header("Sounds")]
+    [SerializeField] private AudioClip[] hitSounds;
+    [SerializeField] private AudioClip[] deathSounds;
+
+    [Header("Sound Volumes")]
+    [SerializeField][Range(0f, 1f)] private float hitVolume = 1f;
+    [SerializeField][Range(0f, 1f)] private float deathVolume = 1f;
+
     public event EventHandler OnTakeHit;
     public event EventHandler OnDeath;
 
@@ -52,7 +60,7 @@ public class EnemyEntity : MonoBehaviour, IDamageable
 
         knockBack?.GetKnockBackFromDirection(hitDir);
 
-        AudioManager.Instance.PlayEnemyHit();
+        AudioManager.Instance.PlayRandomSound(hitSounds, hitVolume);
 
         DetectDeath();
     }
@@ -77,7 +85,8 @@ public class EnemyEntity : MonoBehaviour, IDamageable
             enemyAI.DisableHitbox();
             OnDeath?.Invoke(this, EventArgs.Empty);
 
-            AudioManager.Instance.PlayEnemyDeath();
+            if (deathSounds != null)
+                AudioManager.Instance.PlayRandomSound(deathSounds, deathVolume);
 
             TryDropPotion();
             StartCoroutine(FadeAndDestroy());
