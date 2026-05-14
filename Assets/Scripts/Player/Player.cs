@@ -214,6 +214,7 @@ public class Player : MonoBehaviour
             PlayerCombat.Instance.InterruptAttack();
             StartCoroutine(DashRoutine());
             PlayerVisual.Instance.Dash(inputVector);
+            AudioManager.Instance.PlayDash();
         }
     }
 
@@ -266,6 +267,8 @@ public class Player : MonoBehaviour
 
             isPlayerBlocked = false;
             PlayerVisual.Instance.SetBlock(false, Vector2.zero);
+
+            AudioManager.Instance.PlayHit();
         }
 
         DetectDeath();
@@ -296,6 +299,8 @@ public class Player : MonoBehaviour
         currentHealth = Mathf.Min(maxhealth, currentHealth + potionHealAmount);
 
         FloatingTextSpawner.Instance.SpawnHealText(healAmount, transform.position);
+
+        AudioManager.Instance.PlayPotion();
     }
 
     public bool PickUpPotion()
@@ -315,6 +320,8 @@ public class Player : MonoBehaviour
             GameInput.Instance.DisableMovement();
 
             OnPlayerDeath?.Invoke(this, EventArgs.Empty);
+
+            AudioManager.Instance.PlayDeath();
         }
         
     }

@@ -98,6 +98,7 @@ public class PlayerVisual : MonoBehaviour
         Vector2 finalDir = GetCardinalDir(currentAttackDir);
         Player.Instance.SetLookDirection(finalDir);
         Player.Instance.AttackDash(currentAttackDir);
+        AudioManager.Instance.PlayAttack();
     }
 
     public void EndAttack()
@@ -160,6 +161,11 @@ public class PlayerVisual : MonoBehaviour
     public void EndGroundSlam()
     {
         PlayerCombat.Instance.EndGroundSlam();
+    }
+
+    public void PlayFootstep()
+    {
+        AudioManager.Instance.PlayFootstep();
     }
 
 }

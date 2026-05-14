@@ -553,7 +553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCombat
   slamDamage: 15
-  slamCooldown: 10
+  slamCooldown: 15
   slamRadius: 3
   enemyLayer:
     serializedVersion: 2

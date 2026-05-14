@@ -186,6 +186,7 @@ public class PlayerCombat : MonoBehaviour
             }
         }
 
+        AudioManager.Instance.PlayGroundSlam();
         CameraShake.Instance.Shake(2f, 0.3f);
     }
 

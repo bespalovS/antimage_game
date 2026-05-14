@@ -24,6 +24,7 @@ public class SkillSlotUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         {
             UpdateVisual();
             SkillPanelUI.Instance.UpdateSkillPoints();
+            AudioManager.Instance.PlaySkillUpgrade();
         }
     }
 
@@ -32,7 +33,6 @@ public class SkillSlotUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         int level = SkillSystem.Instance.GetSkillLevel(skillData);
         levelText.text = level + "/" + skillData.maxLevel;
 
-        // светлый если прокачан, тёмный если нет
         dimOverlay.gameObject.SetActive(level == 0);
     }
 

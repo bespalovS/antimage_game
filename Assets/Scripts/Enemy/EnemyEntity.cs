@@ -52,6 +52,8 @@ public class EnemyEntity : MonoBehaviour, IDamageable
 
         knockBack?.GetKnockBackFromDirection(hitDir);
 
+        AudioManager.Instance.PlayEnemyHit();
+
         DetectDeath();
     }
 
@@ -74,6 +76,8 @@ public class EnemyEntity : MonoBehaviour, IDamageable
             enemyAI.setDeathState();
             enemyAI.DisableHitbox();
             OnDeath?.Invoke(this, EventArgs.Empty);
+
+            AudioManager.Instance.PlayEnemyDeath();
 
             TryDropPotion();
             StartCoroutine(FadeAndDestroy());
