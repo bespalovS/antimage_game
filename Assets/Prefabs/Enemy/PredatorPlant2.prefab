@@ -314,7 +314,7 @@ MonoBehaviour:
   deathSounds:
   - {fileID: 8300000, guid: 6d08ea7ae1e2edd4ca5d575a24204253, type: 3}
   hitVolume: 0.3
-  deathVolume: 0.3
+  deathVolume: 0.15
 --- !u!114 &2123980718142924760
 MonoBehaviour:
   m_ObjectHideFlags: 0

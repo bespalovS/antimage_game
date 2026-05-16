@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +9,11 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private string gameSceneName = "Game";
     [SerializeField] private DifficultySettings defaultDifficulty;
+
+    private List<string> destroyedWalls = new List<string>();
+    private List<string> deadEnemies = new List<string>();
+
+    //private HashSet<string> deadEnemies = new HashSet<string>();
 
     private SaveData pendingLoadData;
 
@@ -34,8 +40,8 @@ public class GameManager : MonoBehaviour
         data.currentHealth = Player.Instance.GetCurrentHealth();
         data.currentPotions = Player.Instance.GetCurrentPotions();
 
-        data.deadEnemies = DestructibleWallManager.Instance.GetDeadEnemies();
-        data.destroyedWalls = DestructibleWallManager.Instance.GetDestroyedWalls();
+        data.deadEnemies = GameManager.Instance.GetDeadEnemies();
+        data.destroyedWalls = GameManager.Instance.GetDestroyedWalls();
 
         SkillSystem.Instance.SaveData(data);
         SaveSystem.Save(data);
@@ -58,18 +64,23 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
 
+        destroyedWalls = new List<string>(pendingLoadData.destroyedWalls);
+        deadEnemies = new List<string>(pendingLoadData.deadEnemies);
+
         Player.Instance.transform.position = new Vector3(
             pendingLoadData.playerX, pendingLoadData.playerY, 0f);
 
         foreach (var enemy in FindObjectsByType<EnemyEntity>())
         {
-            if (pendingLoadData.deadEnemies.Contains(enemy.gameObject.name))
-            {
+            if (deadEnemies.Contains(enemy.gameObject.name))
                 Destroy(enemy.gameObject);
-            }
         }
 
-        DestructibleWallManager.Instance.RestoreDestroyedWalls(pendingLoadData.destroyedWalls);
+        foreach (var wall in FindObjectsByType<DestructibleWall>())
+        {
+            if (destroyedWalls.Contains(wall.gameObject.name))
+                Destroy(wall.gameObject);
+        }
 
         Player.Instance.LoadData(pendingLoadData.currentHealth, pendingLoadData.currentPotions);
         SkillSystem.Instance.LoadData(pendingLoadData);
@@ -91,4 +102,18 @@ public class GameManager : MonoBehaviour
         CurrentDifficulty = difficulty;
     }
 
+    public void RegisterDestroyedWall(string wallName)
+    {
+        if (!destroyedWalls.Contains(wallName))
+            destroyedWalls.Add(wallName);
+    }
+
+    public void RegisterDeadEnemy(string enemyName)
+    {
+        if (!deadEnemies.Contains(enemyName))
+            deadEnemies.Add(enemyName);
+    }
+
+    public List<string> GetDestroyedWalls() => destroyedWalls;
+    public List<string> GetDeadEnemies() => deadEnemies;
 }

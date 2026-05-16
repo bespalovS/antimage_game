@@ -73,7 +73,8 @@ public class EnemyEntity : MonoBehaviour, IDamageable
 
             SkillSystem.Instance.AddExp(stats.GetScaledExp());
 
-            DestructibleWallManager.Instance.RegisterDeadEnemy(gameObject.name);
+            if (GameManager.Instance != null)
+                GameManager.Instance.RegisterDeadEnemy(gameObject.name);
 
             foreach (var col in GetComponents<Collider2D>())
                 col.enabled = false;

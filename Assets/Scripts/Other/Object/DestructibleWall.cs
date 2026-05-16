@@ -17,7 +17,7 @@ public class DestructibleWall : MonoBehaviour
 
     private void TargetEnemy_OnDeath(object sender, System.EventArgs e)
     {
-        DestructibleWallManager.Instance.RegisterDestroyedWall(gameObject.name);
+        GameManager.Instance.RegisterDestroyedWall(gameObject.name);
         Destroy(gameObject);
     }
 
